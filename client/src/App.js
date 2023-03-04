@@ -1,10 +1,14 @@
+import React from "react";
 
-import './App.css';
+import "./App.scss";
+import Navbar from "./components/Navbar/Navbar";
+import AuthPage from "./pages/AuthPage/AuthPage";
 
 function App() {
   return (
     <div className="app">
-      <div><p>dlkjbnadupfibnd'flibndsliubhsdf'bns;etiughadfi'bnseiuaghsiofbnewtiubaefobnadubigebpaoid</p></div>
+      <Navbar />
+      <AuthPage/>
     </div>
   );
 }
