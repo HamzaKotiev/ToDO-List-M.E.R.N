@@ -4,6 +4,10 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env || 5000 ;
 
+app.use(express.json());
+app.use(require('./routes'));
+
+
 async function start() {
     try {
         await mongoose.connect('mongodb+srv://HamzatKot:19082002@cluster0.0qerfhd.mongodb.net/ToDo-List?retryWrites=true&w=majority',{
@@ -20,3 +24,5 @@ async function start() {
        console.error(error);
     }
 }
+
+start();
